@@ -1,9 +1,9 @@
-    function getValorCampo = function (obj, nomeCampo) {
-        return isVazio(obj) || isVazio(obj[nomeCampo]) ? null : obj[nomeCampo];
-    };
+	function getValorCampo = function (obj, nomeCampo) {
+		return isVazio(obj) || isVazio(obj[nomeCampo]) ? null : obj[nomeCampo];
+	};
 
-    function isVazio = function (obj) {
-        return (typeof obj === 'undefined') || (obj === null) || (obj === "");
+	function isVazio = function (obj) {
+		return (typeof obj === 'undefined') || (obj === null) || (obj === "");
     };
 
 
