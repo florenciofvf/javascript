@@ -1,11 +1,10 @@
-	function getValorCampo = function (obj, nomeCampo) {
+	function getValorCampo(obj, nomeCampo) {
 		return isVazio(obj) || isVazio(obj[nomeCampo]) ? null : obj[nomeCampo];
 	};
 
-	function isVazio = function (obj) {
+	function isVazio(obj) {
 		return (typeof obj === 'undefined') || (obj === null) || (obj === "");
 	};
-
 
 	function formatarFn(input) {
 			if(isVazio(input) || (input.length !== 11 && input.length !== 14 && input.length !== 18)) {
