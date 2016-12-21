@@ -4,7 +4,7 @@
 
 	function isVazio = function (obj) {
 		return (typeof obj === 'undefined') || (obj === null) || (obj === "");
-    };
+	};
 
 
 	function formatarFn(input) {
