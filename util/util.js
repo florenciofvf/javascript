@@ -67,3 +67,47 @@
 			return resposta;
 		}
 	}
+	
+	function exibir(grafo, hierarquia) {
+		var graf = new Grafo(grafo);
+		var raiz = hierarquia;
+		var atri = null;
+
+		function Grafo(caminho) {
+			var array = caminho.split('.');
+			var indice = 0;
+
+			this.contem = function() {
+				return indice < array.length;
+			}
+
+			this.proximo = function() {
+				if(!this.contem()) {
+					return void 0;
+				}
+			
+				return array[indice++];
+			}
+		}
+		
+		if(isVazio(hierarquia) || isVazio(grafo)) {
+			return false;
+		}
+
+		while(graf.contem()) {
+			atri = raiz[graf.proximo()];
+
+			if(atri == void 0 || atri.visivel != true) {
+				break;
+			}     
+
+			raiz = atri;               
+		}
+
+		return !graf.contem() && atri != void 0 && atri.visivel === true;
+	}
+
+	
+	
+	
+	
