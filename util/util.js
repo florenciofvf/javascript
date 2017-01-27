@@ -3,7 +3,7 @@
 	}
 
 	function isVazio(obj) {
-		return (typeof obj === 'undefined') || (obj === null) || (obj === "");
+		return (typeof obj === 'undefined') || (obj === null) || (obj === "") || (Object.keys(obj).length === 0);
 	}
 
 	function formatarFn(input) {
